@@ -351,7 +351,7 @@ Odysseus serves plain HTTP on its app port. Docker Compose binds Odysseus and th
 
 1. Keep Odysseus on localhost, for example `127.0.0.1:7000`.
 2. Terminate HTTPS at a trusted reverse proxy or private access gateway.
-3. Put the authenticated Odysseus web/API entrypoint behind that layer.
+3. Put the authenticated Odysseus web/API entrypoint behind that layer..
 4. Keep raw service and model ports internal-only.
 
 Cloudflare Access, Tailscale, Caddy, nginx, and Traefik can all fit this pattern; none are required by Odysseus. If your access layer reaches Odysseus on the same host, proxy to `http://127.0.0.1:7000` and keep `AUTH_ENABLED=true`, `LOCALHOST_BYPASS=false`, and `SECURE_COOKIES=true`.
